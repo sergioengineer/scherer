@@ -1,7 +1,7 @@
 import { Article, LogoDev, PersonSharp } from "@mui/icons-material"
 import { Avatar } from "@mui/material"
-import { Container, Logo, Spacer, UserContainer } from "./styles"
-
+import { Spacer } from "../../globalStyles/globalStyleComponents"
+import { Container, Logo, UserContainer } from "./styles"
 const Header: React.FC = () => {
   return (
     <Container>
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         <label>Nome Teste</label>
 
         <Avatar sx={{ width: 26, height: 26, marginLeft: "4px" }}>
-          <PersonSharp sx={{ background: "var(--md-palette-primary-light)" }} />
+          <PersonSharp sx={{ background: "#2f2f2f" }} />
         </Avatar>
       </UserContainer>
     </Container>

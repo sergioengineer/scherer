@@ -7,6 +7,8 @@ const Container = styled("div")(({ theme }) => ({
   width: "100%",
   background: theme.palette.primary.light,
   padding: "6px",
+  boxShadow: "1px 1px 1px 0px black",
+  height: "30px",
 }))
 
 const MenuItem = styled("a")(({ theme }) => ({
@@ -19,5 +21,7 @@ const MenuItem = styled("a")(({ theme }) => ({
     cursor: "pointer",
   },
 }))
+
+styled("div")(({ theme }) => ({}))
 
 export { Container, MenuItem }

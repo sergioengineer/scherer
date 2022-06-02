@@ -16,7 +16,14 @@ const defaultTheme = createTheme({})
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexWrap: "wrap",
+        flexDirection: "column",
+      }}
+    >
       <ThemeProvider theme={defaultTheme}>
         <CssVarsProvider>
           <Header />
@@ -24,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </CssVarsProvider>
       </ThemeProvider>
-    </>
+    </div>
   )
 }
 
