@@ -14,8 +14,9 @@ import {
   randText,
   randUserName,
 } from "@ngneat/falso"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { Spacer } from "../../globalStyles/globalStyleComponents"
+import useDebouncedState from "../../libs/hooks/useDebouncedState"
 import ChamadoDetailedView from "./ChamadoDetailedView"
 import {
   Container,
@@ -27,7 +28,7 @@ import {
 } from "./styles"
 
 const ChamadosManager: React.FC = () => {
-  const [searchText, setSearchText] = useState("")
+  const [searchText, setSearchText] = useDebouncedState("")
   const rowsRef = useRef(Array.from({ length: 5 }, () => makeFakeRow()))
 
   const columns = makeFakeColumns()
@@ -42,8 +43,9 @@ const ChamadosManager: React.FC = () => {
           <label>Buscar cliente:</label>
           <input
             type={"text"}
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
+            onChange={(e) => {
+              setSearchText(e.target.value)
+            }}
           ></input>
         </TitleControlSection>
       </TitleBar>
