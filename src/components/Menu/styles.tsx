@@ -12,6 +12,7 @@ const Container = styled("div", {
 const MenuItem = styled("a", {
   marginRight: "6px",
   fontSize: "13px",
+  color: "#1f1f1f",
   "&:hover": {
     color: "white",
     cursor: "pointer",
