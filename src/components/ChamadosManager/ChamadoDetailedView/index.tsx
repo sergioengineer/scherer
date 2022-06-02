@@ -1,3 +1,4 @@
+import { Paper } from "@mui/material"
 import {
   DataGrid,
   GridCallbackDetails,
@@ -6,7 +7,7 @@ import {
 } from "@mui/x-data-grid"
 import { randNumber, randPastDate, randText, randUserName } from "@ngneat/falso"
 import { useRef, useState } from "react"
-import { Container, Section } from "./styles"
+import { Container, Section, TextSection } from "./styles"
 
 const ChamadoDetailedView: React.FC = () => {
   const rowsRef = useRef(Array.from({ length: 3 }, (_) => makeFakeRow()))
@@ -22,7 +23,9 @@ const ChamadoDetailedView: React.FC = () => {
 
   return (
     <Container>
-      <Section>{selectedChamado?.fullText}</Section>
+      <TextSection>
+        <Paper>{selectedChamado?.fullText}</Paper>
+      </TextSection>
       <Section>
         <DataGrid
           onSelectionModelChange={onSelectionChanged}
@@ -30,7 +33,9 @@ const ChamadoDetailedView: React.FC = () => {
           rows={rowsRef.current}
         ></DataGrid>
       </Section>
-      <Section>{selectedChamado?.statusText}</Section>
+      <TextSection>
+        <Paper>{selectedChamado?.statusText}</Paper>
+      </TextSection>
     </Container>
   )
 }
@@ -65,7 +70,7 @@ function makeFakeRow(): FakeRow {
     date: randPastDate(),
     user: randUserName().toLowerCase(),
     status: randText().toLowerCase(),
-    fullText: randText({ length: 40 }).join(","),
+    fullText: randText({ length: 80 }).join(","),
     statusText: randText({ length: 40 }).join(","),
   }
 }
