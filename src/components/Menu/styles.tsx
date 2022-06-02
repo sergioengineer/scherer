@@ -1,15 +1,16 @@
-import { styled } from "@stitches/react"
+import { styled } from "@mui/system"
 
-const Container = styled("div", {
+const Container = styled("div")(({ theme }) => ({
   display: "flex",
   alignContent: "center",
   alignItems: "center",
   width: "100%",
-  background: "var(--md-palette-primary-light)",
-  padding: "4px",
-})
+  background: theme.palette.primary.light,
+  padding: "6px",
+}))
 
-const MenuItem = styled("a", {
+const MenuItem = styled("a")(({ theme }) => ({
+  all: "unset",
   marginRight: "6px",
   fontSize: "13px",
   color: "#1f1f1f",
@@ -17,6 +18,6 @@ const MenuItem = styled("a", {
     color: "white",
     cursor: "pointer",
   },
-})
+}))
 
 export { Container, MenuItem }

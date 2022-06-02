@@ -12,7 +12,7 @@ const Header: React.FC = () => {
       <Spacer />
       <UserContainer>
         <Article></Article>
-        <label>Marnei Jardim dos Santos</label>
+        <label>Nome Teste</label>
 
         <Avatar sx={{ width: 26, height: 26, marginLeft: "4px" }}>
           <PersonSharp sx={{ background: "var(--md-palette-primary-light)" }} />

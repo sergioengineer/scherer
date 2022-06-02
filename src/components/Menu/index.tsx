@@ -1,10 +1,15 @@
+import Link from "next/link"
 import { Container, MenuItem } from "./styles"
 
 const Menu: React.FC = () => {
   return (
     <Container>
-      <MenuItem>Chamados</MenuItem>
-      <MenuItem>Configurações</MenuItem>
+      <Link href={"Chamados"}>
+        <MenuItem>Chamados</MenuItem>
+      </Link>
+      <Link href="/">
+        <MenuItem>Configurações</MenuItem>
+      </Link>
     </Container>
   )
 }
