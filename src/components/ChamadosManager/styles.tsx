@@ -2,7 +2,7 @@ import { lightBlue } from "@mui/material/colors"
 import { styled } from "@mui/system"
 
 const Container = styled("div")(({ theme }) => ({
-  marginTop: "4px",
+  marginTop: "8px",
   width: "100vw",
   display: "flex",
   flexWrap: "wrap",
@@ -52,7 +52,7 @@ const GridContainer = styled("div")(({ theme }) => ({
     background: theme.palette.primary.light,
     border: "1px solid " + theme.palette.primary.main,
     fontSize: "13px",
-    color: "#1f1f1f",
+    color: "white",
   },
 }))
 

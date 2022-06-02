@@ -7,7 +7,7 @@ const Container = styled("div")(({ theme }) => ({
   width: "100%",
   background: theme.palette.primary.light,
   padding: "6px",
-  boxShadow: "1px 1px 1px 0px black",
+  boxShadow: "0px 3px 5px",
   height: "30px",
 }))
 

@@ -18,9 +18,11 @@ const UserContainer = styled("div")(({ theme }) => ({
   alignContent: "center",
   alignItems: "center",
   marginRight: "8px",
-  border: "1px solid #1f1f1f",
-  padding: "4px",
+  border: "0px solid #1f1f1f",
+  padding: "0px 4px",
   borderRadius: "4px",
+  minWidth: "100px",
+  justifyContent: "space-between",
   color: "#2f2f2f",
 }))
 

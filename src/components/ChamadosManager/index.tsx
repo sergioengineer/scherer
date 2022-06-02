@@ -1,5 +1,6 @@
 import {
   AddCircleOutlineOutlined,
+  AssignmentIndOutlined,
   DeleteForeverOutlined,
   EditLocationAltOutlined,
   LocalPrintshopOutlined,
@@ -15,6 +16,7 @@ import {
 } from "@ngneat/falso"
 import { useRef, useState } from "react"
 import { Spacer } from "../../globalStyles/globalStyleComponents"
+import ChamadoDetailedView from "./ChamadoDetailedView"
 import {
   Container,
   GridContainer,
@@ -33,6 +35,7 @@ const ChamadosManager: React.FC = () => {
   return (
     <Container>
       <TitleBar>
+        <AssignmentIndOutlined style={{ width: "16px" }} />
         <label>Chamados</label>
         <Spacer />
         <TitleControlSection>
@@ -77,16 +80,7 @@ const ChamadosManager: React.FC = () => {
         ></DataGrid>
       </GridContainer>
 
-      <div
-        style={{
-          display: "flex",
-          flexGrow: "1",
-          width: "100%",
-          background: "red",
-        }}
-      >
-        asd asda
-      </div>
+      <ChamadoDetailedView />
     </Container>
   )
 }
