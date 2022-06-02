@@ -1,4 +1,3 @@
-import { Paper } from "@mui/material"
 import {
   DataGrid,
   GridCallbackDetails,
@@ -23,19 +22,16 @@ const ChamadoDetailedView: React.FC = () => {
 
   return (
     <Container>
-      <TextSection>
-        <Paper>{selectedChamado?.fullText}</Paper>
-      </TextSection>
+      <TextSection>{selectedChamado?.fullText}</TextSection>
       <Section>
         <DataGrid
+          headerHeight={35}
           onSelectionModelChange={onSelectionChanged}
           columns={makeFakeColumns()}
           rows={rowsRef.current}
         ></DataGrid>
       </Section>
-      <TextSection>
-        <Paper>{selectedChamado?.statusText}</Paper>
-      </TextSection>
+      <TextSection>{selectedChamado?.statusText}</TextSection>
     </Container>
   )
 }

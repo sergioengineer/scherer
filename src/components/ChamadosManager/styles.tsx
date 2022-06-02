@@ -1,3 +1,4 @@
+import { Button } from "@mui/material"
 import { lightBlue } from "@mui/material/colors"
 import { styled } from "@mui/system"
 
@@ -38,7 +39,7 @@ const GridControlSection = styled("div")(({ theme }) => ({
   height: "30px",
 }))
 
-const GridControl = styled("button")(({ theme }) => ({
+const GridControl = styled(Button)(({ theme }) => ({
   padding: "2px 8px",
   display: "flex",
   margin: "0px 2px",
